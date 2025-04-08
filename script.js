@@ -38,7 +38,7 @@ else if(guessInput>100){
 else{
   //validInput
   previousGuessArray.push(guessInput)
-  if (numGuess > 2) {
+  if (numGuess > 10) {
     displayGuess(guessInput);
     displayMessage(`gameOver.Random was ${randomNumber}`);
      endGame();
