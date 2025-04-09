@@ -28,12 +28,15 @@ if(gamePlay){
 function validation(guessInput){
 if(isNaN(guessInput)){
   alert("Please enter a valid number.");
+  userInput.value=""
 }
 else if(guessInput<=0){
   alert("Zero is not allowed. Number should be greater than zero.");
+  userInput.value = "";
 }
 else if(guessInput>100){
   alert("Number should be within 1 to 100.");
+  userInput.value = "";
 }
 else{
   //validInput
@@ -53,14 +56,14 @@ else{
 //check userInput to randomNumber
 function checkGuess(guessInput){
   if(guessInput===randomNumber){
-    displayMessage('u have guested right')
+    displayMessage('you have guessed right')
     endGame()
   }else if(guessInput>randomNumber){
-        displayMessage("guested number is greater");
+        displayMessage("guessed number is greater");
 
   }
   else if(guessInput<randomNumber){
-        displayMessage("guested number is low");
+        displayMessage("guessed number is low");
 
   }
 }
